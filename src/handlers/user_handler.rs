@@ -1,6 +1,7 @@
 use actix_web::{HttpResponse}; // чтобы использовать структуру
 use validator::Validate; // чтобы использовать правила
 use crate::models::user::RegisterRequest;
+use crate::utils::hash::hash_password;
 
 /*
   Модно передаём стринг, ибо мало-ли имя не указали.
@@ -22,7 +23,14 @@ pub async fn greet_user(name: Option<String>) -> HttpResponse {
  */
 pub async fn register_user(req: RegisterRequest) -> HttpResponse {
     match req.validate() {
-        Ok(_) => HttpResponse::Ok().body("Registered successfully"),
+        Ok(_) => /* HttpResponse::Ok().body("Registered successfully")*/ {
+            match hash_password(&req.password) {
+                Ok(hashed) => {
+                    HttpResponse::Ok().body(format!("Registered with hash: {}", hashed))
+                }
+                Err(_) => HttpResponse::InternalServerError().body("Hashing failed"),
+            }
+        },
         Err(e) => HttpResponse::BadRequest().body(format!("Validation error: {:?}", e)),
     }
 }

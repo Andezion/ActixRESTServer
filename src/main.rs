@@ -2,6 +2,7 @@ use actix_web::{App, HttpServer}; // самон важное берём
 mod routes; // берём наши папки
 mod handlers;
 mod models;
+mod utils;
 
 
 /*
@@ -16,7 +17,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .configure(routes::config) // конфигурируем все маршруты
     })
-        .bind(("127.0.0.1", 8080))?
+        .bind(("127.0.0.1", 8081))?
         .run()
         .await
 }
