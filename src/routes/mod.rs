@@ -1,4 +1,5 @@
 pub mod users;
+pub mod auth;
 
 use actix_web::web;
 
@@ -10,4 +11,6 @@ use actix_web::web;
 pub fn config(cfg: &mut web::ServiceConfig) {
     cfg.service(web::scope("/users")
         .configure(users::config));
+    cfg.service(web::scope("/auth")
+        .configure(auth::configure));
 }

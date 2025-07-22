@@ -16,3 +16,6 @@ log = "0.4.27"
 argon2 = "0.6.0-rc.0"
 rand = "0.9.1"
 rand_core = "0.9.3"  # Для генерации соли
+
+jsonwebtoken = "9"
+chrono = "0.4"
