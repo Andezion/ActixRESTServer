@@ -10,6 +10,7 @@ A small server to test basic functionality
 ---
 
 ## General info
+In order to familiarise myself with backend writing, encryption, administration and Rust in general - this mini project was made.
 
 ---
 
