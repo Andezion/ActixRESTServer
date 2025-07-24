@@ -55,3 +55,8 @@ Made a project using:
 ---
 
 ## Setup
+Either download the latest release or:
+```
+git clone https://github.com/Andezion/ActixRESTServer.git
+cd ActixRESTServer
+```
