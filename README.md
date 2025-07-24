@@ -5,6 +5,24 @@ A small server to test basic functionality
 * [General info](#general-info)
 * [Demonstration](#demonstration)
 * [Technologies](#technologies)
-* [Features](#features)
+* [Plans](#plans)
 * [Setup](#setup)
 ---
+
+## General info
+
+---
+
+## Demonstration
+
+---
+
+## Technologies
+
+---
+
+## Plans
+
+---
+
+## Setup
