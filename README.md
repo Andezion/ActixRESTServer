@@ -24,15 +24,25 @@ A small server to test basic functionality
 ## Plans
 
 ✅ User Registration
+
 ✅ User Authentication
+
 ✅ User Information Route
+
 ✅ User Roles
+
 ✅ Splitting Code into Modules
+
 ✅ Working with Application State
+
 ❌ Database
+
 ❌ API documentation 
+
 ❌ Deploy
+
 ❌ CORS
+
 ❌ Testing
 
 ---
