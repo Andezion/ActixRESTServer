@@ -16,7 +16,7 @@ In order to familiarise myself with backend writing, encryption, administration 
 
 ## Demonstration
 I will now try to show you some of the functionality at the moment
-https://github.com/Andezion/ActixRESTServer/blob/main/photo/image_1.png
+![Нет фото 1](https://github.com/Andezion/ActixRESTServer/blob/main/photo/image_1.png)
 
 ---
 
