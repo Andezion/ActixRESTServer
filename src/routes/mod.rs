@@ -9,8 +9,8 @@ use actix_web::web;
   расширения в будущем.
  */
 pub fn config(cfg: &mut web::ServiceConfig) {
-    cfg.service(web::scope("/users")
+    cfg.service(web::scope("/users") // дорога к пользователям
         .configure(users::config));
-    cfg.service(web::scope("/auth")
+    cfg.service(web::scope("/auth") // дорога к аутентификации
         .configure(auth::configure));
 }

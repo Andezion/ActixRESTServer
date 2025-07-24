@@ -1,6 +1,8 @@
 use chrono::{Utc, Duration}; // для проверки срока действия
 use jsonwebtoken::{encode, decode, Header, EncodingKey, DecodingKey, Validation}; // для генерации токена
-use crate::models::auth::Claims; // берём нашу модель
+use crate::models::auth::Claims;
+use crate::models::role::Roles;
+// берём нашу модель
 
 /*
     Создаём токен по id пользователя и секретному ключу,
@@ -9,7 +11,7 @@ use crate::models::auth::Claims; // берём нашу модель
     
     Ну и потом возвращаем готовый токен либо ошибку, если не пошло
  */
-pub fn generate_token(user_id: &str, secret_key: &str) -> Result<String, jsonwebtoken::errors::Error> {
+pub fn generate_token(user_id: &str, role: Roles, secret_key: &str) -> Result<String, jsonwebtoken::errors::Error> {
     let expiration = Utc::now()
         .checked_add_signed(Duration::minutes(60))
         .expect("valid timestamp")
@@ -18,6 +20,7 @@ pub fn generate_token(user_id: &str, secret_key: &str) -> Result<String, jsonweb
     let claims = Claims {
         sub: user_id.to_owned(),
         exp: expiration, // Наш срок действия!!!
+        role // добавил переменную которая хранит роль
     };
     
     // Пробуем закодировать

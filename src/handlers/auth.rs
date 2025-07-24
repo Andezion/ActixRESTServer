@@ -1,5 +1,7 @@
 use actix_web::{post, web, HttpResponse}; // для наших ответов и работы с данными
-use serde::Deserialize; // для автоматического преобразования
+use serde::Deserialize;
+use crate::models::role::Roles;
+// для автоматического преобразования
 use crate::utils::{hash::verify_password, jwt::generate_token}; // наш импорт
 // use crate::models::user::RegisterRequest; // наша модель пользователя
 use crate::state::AppState; // тут храним секретный ключ
@@ -25,9 +27,9 @@ pub async fn login(
     state: web::Data<AppState>,
 ) -> HttpResponse {
     // Пока базы нет - то решил сделать так :)
-    let hardcoded_user_email = "test@example.com";
-    let hardcoded_hash = "$argon2id$v=19$m=19456,t=2,p=1$B3e71rvLQvdduLtdAkB+xg$KM28kb2U12fvpujpleMlmCGa27su/8eHrJXv0vs+XcQ"; // пароль "password123"
-    let hardcoded_user_id = "user-123";
+    let hardcoded_user_email = "admin@example.com";
+    let hardcoded_hash = "$argon2id$v=19$m=19456,t=2,p=1$M+pKhkUumZB99RzyaMRDKw$DBpp8eY1DP9WxFVqsK93GgMab3kL3kqKOLUwhJrXpPA"; // пароль "super_secret"
+    let hardcoded_user_id = "admin-1"; // тут к сожалению лишь вручную тыкать и менять, пока что!
 
     // Проверка почты
     if data.email != hardcoded_user_email {
@@ -40,7 +42,7 @@ pub async fn login(
     }
 
     // Тут генерируем наш токен
-    let token = match generate_token(hardcoded_user_id, &state.jwt_secret) {
+    let token = match generate_token(hardcoded_user_id, Roles::Admin, &state.jwt_secret) {
         Ok(token) => token,
         Err(_) => return HttpResponse::InternalServerError().body("Token generation failed"),
     };

@@ -1,5 +1,7 @@
-use serde::Deserialize; // переделать json в структуру
-use validator::Validate; // вводим правила
+use serde::{Deserialize, Serialize}; // переделать json в структуру
+use validator::Validate;
+use crate::models::role::Roles;
+// вводим правила
 
 /*
   Крутой СпрингБут но в расте, debug для того чтобы круто выводить,
@@ -14,4 +16,16 @@ pub struct RegisterRequest {
     // аналогично @Size(min = 6) в Spring
     #[validate(length(min = 6, message = "Password must be at least 6 characters"))]
     pub password: String, // и задаём ещё текст ошибки
+}
+
+/*
+    Структура для того чтобы Админ мог выводить всех пользователей
+    Тут у нас индекс пользователя, его почта и собственно сама роль
+ */
+
+#[derive(Debug, Serialize)]
+pub struct UserResponse {
+    pub id: u32,
+    pub email: String,
+    pub role: Roles,
 }
