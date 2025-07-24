@@ -18,7 +18,14 @@ A small server to test basic functionality
 ---
 
 ## Technologies
-
+Made a project using:
+* Rust
+* Actix-web
+* Serde
+* Validator
+* argon2
+* jsonwebtoken
+  
 ---
 
 ## Plans
