@@ -16,12 +16,13 @@ In order to familiarise myself with backend writing, encryption, administration 
 
 ## Demonstration
 I will now try to show you some of the functionality at the moment
-![ActixRESTServer](./photo/photo1.jpg)
-![ActixRESTServer](./photo/photo2.jpg)
-![ActixRESTServer](./photo/photo3.jpg)
-![ActixRESTServer](./photo/photo4.jpg)
-![ActixRESTServer](./photo/photo5.jpg)
-![ActixRESTServer](./photo/photo6.jpg)
+![ActixRESTServer](./photo/photo1.png)
+![ActixRESTServer](./photo/photo2.png)
+![ActixRESTServer](./photo/photo3.png)
+![ActixRESTServer](./photo/photo4.png)
+![ActixRESTServer](./photo/photo5.png)
+![ActixRESTServer](./photo/photo6.png)
+
 ---
 
 ## Technologies
