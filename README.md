@@ -18,21 +18,24 @@ In order to familiarise myself with backend writing, encryption, administration 
 I will now try to show you some of the functionality at the moment!
 
 1) For example, we can generate a token by entering our email address and password!
+ 
 ![ActixRESTServer](./photo/photo1.png)
 
 2) With the necessary role, namely Admin or Manager, we can obtain a list of all users if we have previously generated a token.
+
 ![ActixRESTServer](./photo/photo2.png)
 
-3) 
+3) With the token, we can retrieve our user's name!
+ 
 ![ActixRESTServer](./photo/photo3.png)
 
-4) 
+7) 
 ![ActixRESTServer](./photo/photo4.png)
 
-5) 
+8) 
 ![ActixRESTServer](./photo/photo5.png)
 
-6) 
+9) 
 ![ActixRESTServer](./photo/photo6.png)
 
 ---
