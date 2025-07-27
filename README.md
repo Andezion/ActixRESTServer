@@ -33,10 +33,12 @@ I will now try to show you some of the functionality at the moment!
   
 ![ActixRESTServer](./photo/photo4.png)
 
-8) 
+5) If we want, we can get a more personalised greeting!
+ 
 ![ActixRESTServer](./photo/photo5.png)
 
-9) 
+6) We can also register a user - at the end we will get their hash!
+
 ![ActixRESTServer](./photo/photo6.png)
 
 ---
