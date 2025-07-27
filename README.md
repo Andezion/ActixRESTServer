@@ -29,7 +29,8 @@ I will now try to show you some of the functionality at the moment!
  
 ![ActixRESTServer](./photo/photo3.png)
 
-7) 
+4) To check the functionality of our server, we can receive a ‘Hello!’ message from it.
+  
 ![ActixRESTServer](./photo/photo4.png)
 
 8) 
