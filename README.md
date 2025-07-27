@@ -15,8 +15,12 @@ In order to familiarise myself with backend writing, encryption, administration 
 ---
 
 ## Demonstration
-I will now try to show you some of the functionality at the moment
+I will now try to show you some of the functionality at the moment!
+
+For example, we can generate a token by entering our email address and password!
 ![ActixRESTServer](./photo/photo1.png)
+
+
 ![ActixRESTServer](./photo/photo2.png)
 ![ActixRESTServer](./photo/photo3.png)
 ![ActixRESTServer](./photo/photo4.png)
