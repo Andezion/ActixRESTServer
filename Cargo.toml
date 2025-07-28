@@ -19,3 +19,5 @@ rand_core = "0.9.3"  # Для генерации соли
 
 jsonwebtoken = "9"
 chrono = "0.4"
+
+bdk = { version = "0.28", features = ["all-keys"] }

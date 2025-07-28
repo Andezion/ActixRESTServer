@@ -1,5 +1,6 @@
 pub mod users;
 pub mod auth;
+mod wallet_routes;
 
 use actix_web::web;
 
@@ -13,4 +14,6 @@ pub fn config(cfg: &mut web::ServiceConfig) {
         .configure(users::config));
     cfg.service(web::scope("/auth") // дорога к аутентификации
         .configure(auth::configure));
+    cfg.service(web::scope("/wallet") // дорога к деньгам
+        .configure(wallet_routes::config));
 }

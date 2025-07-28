@@ -3,7 +3,11 @@
     в будущем нужно переместить в .env!!!
  */
 
+use std::sync::Mutex;
+use bdk::{Wallet, database::MemoryDatabase};
+
 #[derive(Clone)]
 pub struct AppState {
     pub jwt_secret: String,
+    pub wallet: std::sync::Arc<Mutex<Wallet<MemoryDatabase>>>, // наш кошелёк - тоже секретный и поэтому храниться тут!
 }

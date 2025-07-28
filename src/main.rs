@@ -1,5 +1,7 @@
 use actix_web::{web, App, HttpServer};
 use crate::state::AppState;
+use crate::models::wallet::create_wallet;
+use std::sync::{Arc, Mutex};
 
 // самое важное берём
 mod routes; // берём наши папки
@@ -16,9 +18,11 @@ mod state;
 async fn main() -> std::io::Result<()> {
     println!("server at http://127.0.0.1:8081");
 
-    // Твоя "глобальная переменная" — секретный ключ для JWT
+    let wallet = create_wallet();
+
     let app_state = AppState {
         jwt_secret: "super_secret_key".to_string(), // временно хардкодим
+        wallet: Arc::new(Mutex::new(wallet)),
     };
 
     HttpServer::new(move || {

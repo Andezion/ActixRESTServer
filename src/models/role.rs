@@ -4,6 +4,6 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Roles {
     User,
-    Manager, 
+    Manager, // этот тоже может
     Admin // Важно!! Может посмотреть всех пользователей
 }
