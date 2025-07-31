@@ -51,6 +51,8 @@ Made a project using:
 * Validator
 * argon2
 * jsonwebtoken
+* bdk
+* reqwest
   
 ---
 
@@ -67,6 +69,10 @@ Made a project using:
 ✅ Splitting Code into Modules
 
 ✅ Working with Application State
+
+✅ Creating a wallet
+
+✅ Course check
 
 ❌ Database
 
