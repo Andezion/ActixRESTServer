@@ -45,6 +45,10 @@ I will now try to show you some of the functionality at the moment!
 
 ![ActixRESTServer](./photo/photo7.png)
 
+8) We can also create a wallet and retrieve its address:
+
+![ActixRESTServer](./photo/photo8.png)
+
 ---
 
 ## Technologies
