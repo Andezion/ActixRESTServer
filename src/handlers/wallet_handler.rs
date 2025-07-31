@@ -10,7 +10,7 @@ use crate::state::AppState; // импорт нашей важной переме
     который мы тут распаковываем. После из этого кошелька просим адресс его.
     Если всё хорошо то возвращаем его адресс.
  */
-#[get("/wallet/address")]
+#[get("/address")]
 pub async fn get_address(data: web::Data<AppState>) -> impl Responder { // респондер - это html
     let wallet = data.wallet.lock().unwrap();
     let address = wallet.get_address(AddressIndex::New).unwrap();
