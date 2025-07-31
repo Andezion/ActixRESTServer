@@ -41,6 +41,10 @@ I will now try to show you some of the functionality at the moment!
 
 ![ActixRESTServer](./photo/photo6.png)
 
+7) If we want to see the current Bitcoin exchange rate against certain currencies, we can do so as follows:
+
+![ActixRESTServer](./photo/photo7.png)
+
 ---
 
 ## Technologies
