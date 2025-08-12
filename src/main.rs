@@ -2,6 +2,8 @@ use actix_web::{web, App, HttpServer};
 use crate::state::AppState;
 use crate::models::wallet::create_wallet;
 use std::sync::{Arc, Mutex};
+use bdk::blockchain::{ElectrumBlockchain};
+use bdk::electrum_client::Client;
 
 // самое важное берём
 mod routes; // берём наши папки
@@ -20,9 +22,15 @@ async fn main() -> std::io::Result<()> {
 
     let wallet = create_wallet();
 
+    let electrum_url = "ssl://electrum.blockstream.info:60002";
+
+    let client = Client::new(electrum_url).expect("Failed to connect Electrum client");
+    let blockchain = ElectrumBlockchain::from(client);
+
     let app_state = AppState {
         jwt_secret: "super_secret_key".to_string(), // временно хардкодим
         wallet: Arc::new(Mutex::new(wallet)),
+        blockchain: Arc::new(Mutex::new(blockchain)),
     };
 
     HttpServer::new(move || {
