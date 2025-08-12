@@ -10,6 +10,6 @@ use bdk::blockchain::ElectrumBlockchain;
 #[derive(Clone)]
 pub struct AppState {
     pub jwt_secret: String,
-    pub wallet: std::sync::Arc<Mutex<Wallet<MemoryDatabase>>>, // наш кошелёк - тоже секретный и поэтому храниться тут!
+    pub wallet: Arc<Mutex<Wallet<MemoryDatabase>>>, // наш кошелёк - тоже секретный и поэтому храниться тут!
     pub blockchain: Arc<Mutex<ElectrumBlockchain>>,
 }

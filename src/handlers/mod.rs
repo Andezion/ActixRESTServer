@@ -4,3 +4,4 @@ pub mod user;
 pub(crate) mod wallet_handler;
 pub(crate) mod btc_handler;
 mod send_bitcoin;
+pub(crate) mod product_handler;

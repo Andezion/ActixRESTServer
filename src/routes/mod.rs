@@ -2,7 +2,7 @@ pub mod users;
 pub mod auth;
 mod wallet_routes;
 mod btc_routes;
-
+mod product_routes;
 
 use actix_web::web;
 
@@ -20,4 +20,6 @@ pub fn config(cfg: &mut web::ServiceConfig) {
         .configure(wallet_routes::config));
     cfg.service(web::scope("/btc") // проверить биткоин
         .configure(btc_routes::config));
+    cfg.service(web::scope("/products") // или /show, как хочешь
+        .configure(product_routes::config));
 }

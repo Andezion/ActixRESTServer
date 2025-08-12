@@ -25,7 +25,7 @@ pub async fn send_bitcoin(
 
     let script_pubkey = match Address::from_str(&req.to_address)
         .and_then(|addr| addr.require_network(Network::Testnet)) {
-        Ok(addr) => addr.script_pubkey(), // <--- fix here
+        Ok(addr) => addr.script_pubkey(),
         Err(_) => return HttpResponse::BadRequest()
             .body("Invalid address or wrong network"),
     };

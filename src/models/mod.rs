@@ -3,3 +3,4 @@ pub mod auth;
 pub mod role;
 pub(crate) mod wallet;
 mod blockchain;
+pub(crate) mod product;
