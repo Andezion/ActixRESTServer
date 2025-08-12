@@ -41,6 +41,14 @@ I will now try to show you some of the functionality at the moment!
 
 ![ActixRESTServer](./photo/photo6.png)
 
+7) If we want to see the current Bitcoin exchange rate against certain currencies, we can do so as follows:
+
+![ActixRESTServer](./photo/photo7.png)
+
+8) We can also create a wallet and retrieve its address:
+
+![ActixRESTServer](./photo/photo8.png)
+
 ---
 
 ## Technologies
@@ -51,6 +59,8 @@ Made a project using:
 * Validator
 * argon2
 * jsonwebtoken
+* bdk
+* reqwest
   
 ---
 
@@ -67,6 +77,10 @@ Made a project using:
 ✅ Splitting Code into Modules
 
 ✅ Working with Application State
+
+✅ Creating a wallet
+
+✅ Course check
 
 ❌ Database
 
