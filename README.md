@@ -49,6 +49,10 @@ I will now try to show you some of the functionality at the moment!
 
 ![ActixRESTServer](./photo/photo8.png)
 
+9) We can also generate a list of all products and their quantities:
+
+![ActixRESTServer](./photo/photo9.png)
+
 ---
 
 ## Technologies
