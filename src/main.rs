@@ -31,6 +31,7 @@ async fn main() -> std::io::Result<()> {
         jwt_secret: "super_secret_key".to_string(), // временно хардкодим
         wallet: Arc::new(Mutex::new(wallet)),
         blockchain: Arc::new(Mutex::new(blockchain)),
+        products: Arc::new(Mutex::new(vec![])),
     };
 
     HttpServer::new(move || {
