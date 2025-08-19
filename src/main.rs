@@ -1,9 +1,12 @@
-use actix_web::{web, App, HttpServer};
-use crate::state::AppState;
 use crate::models::wallet::create_wallet;
-use std::sync::{Arc, Mutex};
-use bdk::blockchain::{ElectrumBlockchain};
+use crate::state::AppState;
+use actix_web::{web, App, HttpServer};
+use bdk::blockchain::ElectrumBlockchain;
 use bdk::electrum_client::Client;
+use std::sync::{Arc, Mutex};
+
+use secp256k1::rand::rngs::OsRng;
+use secp256k1::Secp256k1;
 
 // самое важное берём
 mod routes; // берём наши папки
@@ -19,6 +22,12 @@ mod state;
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     println!("server at http://127.0.0.1:8081");
+
+    let mut rng = OsRng;
+    let secp = Secp256k1::new();
+    let (secret_key, public_key) = secp.generate_keypair(&mut rng);
+
+    println!("Secret key: {:?}\nPublic_key: {}\n", secret_key, public_key);
 
     let wallet = create_wallet();
 
